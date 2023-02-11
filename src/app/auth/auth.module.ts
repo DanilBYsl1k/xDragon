@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {MatIconModule} from '@angular/material/icon';
-
+import { ReactiveFormsModule } from '@angular/forms';
 const baseUrl = "auth"
 
 const routes: Routes = [
@@ -42,7 +42,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ],
   exports: [RouterModule]
 })
