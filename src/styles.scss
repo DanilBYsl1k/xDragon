@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: Sans;
+	src: url(./assets/font/WorkSans-Medium.ttf);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "~bootstrap/dist/css/bootstrap.css";
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; font-family: Sans;}
+
+
+.button {
+	@apply bg-white text-blue-500 font-medium w-full py-4 rounded-md text-xl shadow-lg shadow-blue-400/50 uppercase;
+	&:hover{
+		@apply bg-blue-400 text-white ease-in-out duration-300 scale-105 shadow-blue-400/75;
+	}
+}
