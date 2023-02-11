@@ -5,6 +5,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
+import { WelcomeComponent } from './welcome/welcome.component';
+import {MatIconModule} from '@angular/material/icon';
+
 const baseUrl = "auth"
 
 const routes: Routes = [
@@ -12,6 +15,10 @@ const routes: Routes = [
     path: baseUrl,
     component: DashboardComponent,
     children: [
+      {
+        path: 'welcome',
+        component: WelcomeComponent
+      },
       {
         path: 'register',
         component: RegisterComponent
@@ -28,12 +35,14 @@ const routes: Routes = [
   declarations: [
     DashboardComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   exports: [RouterModule]
 })
