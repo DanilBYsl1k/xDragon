@@ -6,12 +6,22 @@ const handlErrors=(res,error)=>{
 
 const registerPost=(req,res)=>{
     const auth=new Auth(req.body)
-    auth
-        .save()
-        .then((param)=>{
-            res
-                .status(200)
-                .json(param)
+    Auth
+        .find({email:req.body.email})
+        .then((user)=>{
+            if (user.length==1) {
+                res
+                    .status(404)
+                    .json('This user was already exist')
+            } else {
+                auth
+                .save()
+                .then((param)=>{
+                    res
+                        .status(200)
+                        .json(param)
+            })
+            }
         })
         .catch((err)=> handlErrors(res,req))
 }
@@ -39,8 +49,6 @@ const loginPost=async (req,res)=>{
             }
         })
 }
-
-
 
 //const auth
 module.exports={
