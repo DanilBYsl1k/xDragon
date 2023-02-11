@@ -1,13 +1,27 @@
 .wrapper {
-	@apply min-h-full bg-blue-500
-}
-.row {
-}
-.col-5 {
+	@apply h-[100vh] bg-blue-600 box-content
 }
 .auth {
+	@apply h-[100vh] p-16
 }
 .auth__content {
+	@apply mt-28
+}
+.auth__logo {
+	@apply text-3xl
+}
+.auth__title {
+	@apply text-5xl text-white uppercase
+}
+.auth__btns{
+	@apply mt-12
+}
+.auth__btn {
+	@apply bg-white text-blue-500 font-medium w-full py-4 rounded-md text-xl shadow-lg shadow-blue-400/50 uppercase;
+	&:hover{
+		@apply bg-blue-400 text-white ease-in-out duration-300 scale-105 shadow-blue-400/75;
+	}
 }
 .cover {
+	@apply bg-red-500 w-full h-full
 }

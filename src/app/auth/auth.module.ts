@@ -7,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { reducersAuth } from './store/reduce';
+import { EffectsModule } from '@ngrx/effects';
 const baseUrl = "auth"
 
 const routes: Routes = [
@@ -37,7 +40,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatInputModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature('auth',reducersAuth),
+    EffectsModule.forFeature([])
   ],
   exports: [RouterModule]
 })

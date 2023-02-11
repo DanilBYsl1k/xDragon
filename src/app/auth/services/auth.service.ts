@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Iauth } from '../types/auth.types';
+import { Iauth } from '../types/auth.interface';
 
 @Injectable({
   providedIn: 'root'
