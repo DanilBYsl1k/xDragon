@@ -1,4 +1,6 @@
-<form action="" class="form">
+
+	<h2 class="form__title">Login</h2>
+	<form action="" class="form">
 	<div class="row">
 		  <div class="col-12">
 			<mat-form-field class="w-full">
@@ -13,6 +15,20 @@
 					<input matInput placeholder="Ex. Pizza" placeholder="********">
 				</mat-form-field>
 			</div>
+	</div>
+
+	<div class="form__btn-box">
+		<button class="button">Send</button>
+	</div>
+
+	<hr class="mt-4 text-white">
+
+	<div class="form__back">
+
+		<a [routerLink]="'/auth/register'">
+			<p> if you don't have an account, please register</p>
+			<mat-icon>arrow_right_alt</mat-icon>
+		</a>
 	</div>
 </form>
 
