@@ -15,6 +15,7 @@ import { reducersAuth } from './store/reduce';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginEffect } from './store/effect/login.effect';
 import { RegisterEffect } from './store/effect/register.effect';
+import { AuthGuard } from './guards/auth.guard';
 const baseUrl = "auth"
 
 const routes: Routes = [
@@ -33,7 +34,7 @@ const routes: Routes = [
       },
       {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
       },
       {
         path: 'login',
@@ -61,6 +62,7 @@ const routes: Routes = [
     StoreModule.forFeature('auth',reducersAuth),
     EffectsModule.forFeature([LoginEffect, RegisterEffect])
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AuthModule { }
