@@ -9,6 +9,12 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import {TextLinkComponent} from "../common/text-link/text-link.component";
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { reducersAuth } from './store/reduce';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginEffect } from './store/effect/login.effect';
+import { RegisterEffect } from './store/effect/register.effect';
 const baseUrl = "auth"
 
 const routes: Routes = [
@@ -50,7 +56,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatInputModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    StoreModule.forFeature('auth',reducersAuth),
+    EffectsModule.forFeature([LoginEffect, RegisterEffect])
   ],
   exports: [RouterModule]
 })

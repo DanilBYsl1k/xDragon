@@ -3,22 +3,22 @@ import { Injectable } from "@angular/core";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { AuthService } from "app/auth/service/auth.service";
 import { catchError, map, of, switchMap } from "rxjs";
-import { actionLogin, actionLoginSuccess, actionLoginFailure } from "../action/login.action";
+import { actionRegister, actionRegisterSuccess, actionRegisterFailure } from "../action/register.action";
 
 @Injectable({
     providedIn: 'root'
 })
-export class LoginEffect{
+export class RegisterEffect{
     constructor(private actions$:Actions, private authService:AuthService){}
     login$=createEffect(()=>this.actions$.pipe(
-        ofType(actionLogin),
+        ofType(actionRegister),
         switchMap((formValue)=>{
-            return this.authService.login(formValue.pams).pipe(map((user)=>{
-                return actionLoginSuccess({answer:user})
+            return this.authService.register(formValue.pams).pipe(map((user)=>{
+                return actionRegisterSuccess({answer:user})
             }))
         }),
         catchError((err:HttpErrorResponse)=>{
-            return of(actionLoginFailure({err:err}))
+            return of(actionRegisterFailure({err:err}))
         })
     ))
 }
