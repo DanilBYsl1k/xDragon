@@ -9,7 +9,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "~bootstrap/dist/css/bootstrap.css";
-html, body { height: 100%; font-family: Sans;}
+html, body { height: 100%; font-family: Sans; min-width: 400px}
 
 
 .button {
@@ -28,5 +28,11 @@ html, body { height: 100%; font-family: Sans;}
 .button-primary{
 	&:hover{
 		@apply bg-blue-900 text-white shadow-blue-400/75
+	}
+}
+.button-disabled{
+	@apply cursor-default bg-slate-400 text-white shadow-none;
+	&:hover{
+		@apply scale-100
 	}
 }
