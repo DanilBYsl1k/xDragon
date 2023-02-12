@@ -19,6 +19,6 @@ export class LoginComponent implements OnInit{
     )
   }
   sendForm(){
-    console.log(this.loginForm.controls)
+    console.log(this.loginForm.valid)
   }
 }

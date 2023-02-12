@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="form__btn-box">
-		<button class="button button-send" type="submit">Send</button>
+		<button class="button " type="submit" [class]="!registerForm.valid ? 'button-disabled' : 'button-send'">Send</button>
 	</div>
 	
 	<hr class="mt-8 text-white">
