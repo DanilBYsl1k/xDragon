@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { AuthModule } from './auth/auth.module';
 
+//Material 
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +24,8 @@ import { AuthModule } from './auth/auth.module';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     EffectsModule.forRoot([]),
     BrowserAnimationsModule,
-    AuthModule
+    AuthModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
+import {TextLinkComponent} from "../common/text-link/text-link.component";
 const baseUrl = "auth"
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: `${baseUrl}/welcome`,
+    pathMatch: "full",
+  },
   {
     path: baseUrl,
     component: DashboardComponent,
@@ -36,7 +42,8 @@ const routes: Routes = [
     DashboardComponent,
     RegisterComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TextLinkComponent
   ],
   imports: [
     CommonModule,

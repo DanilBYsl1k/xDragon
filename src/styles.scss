@@ -13,8 +13,20 @@ html, body { height: 100%; font-family: Sans;}
 
 
 .button {
-	@apply bg-white text-blue-500 font-medium w-full py-4 rounded-md text-xl shadow-lg shadow-blue-400/50 uppercase;
+	@apply bg-white text-blue-500 font-medium w-full py-4 rounded-md text-xl shadow-lg shadow-blue-400/50 uppercase ease-in-out duration-300;
 	&:hover{
-		@apply bg-green-400 text-white ease-in-out duration-300 scale-105 shadow-blue-400/75;
+		@apply ease-in-out duration-300 scale-105;
+	}
+}
+
+
+.button-send{
+	&:hover{
+		@apply bg-green-400 text-white shadow-blue-400/75
+	}
+}
+.button-primary{
+	&:hover{
+		@apply bg-blue-900 text-white shadow-blue-400/75
 	}
 }

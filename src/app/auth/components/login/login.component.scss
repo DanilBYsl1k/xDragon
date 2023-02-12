@@ -1,0 +1,21 @@
+.form{
+	@apply mt-10
+}
+.form__btn-box{
+	@apply max-w-[250px]
+}
+.form__title{
+	@apply text-5xl text-white uppercase
+}
+.form__back{
+	@apply mt-8 text-yellow-300 ;
+	&:hover{
+		@apply cursor-pointer text-white delay-100
+	}
+}
+.form__back-link{
+	@apply relative
+}
+.form__back-icon{
+	@apply absolute right-[-2rem] top-[1px]
+}
