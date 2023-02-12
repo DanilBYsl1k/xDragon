@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 
 //Material 
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     EffectsModule.forRoot([]),
     BrowserAnimationsModule,
     AuthModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

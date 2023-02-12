@@ -1,6 +1,7 @@
 import { Action, createReducer, on } from "@ngrx/store";
 import { authInitialState } from "../types/authInitialState.interface";
-import { actionRegister, actionRegisterFailur, actionRegisterSuccess } from "./action/auth.action";
+import { actionLogin, actionLoginSuccess, actionLoginFailure } from "./action/login.action";
+import { actionRegister, actionRegisterFailure, actionRegisterSuccess } from "./action/register.action";
 
 
 const initialState:authInitialState={
@@ -10,6 +11,27 @@ const initialState:authInitialState={
 
 const authReducer=createReducer(
     initialState,
+    on(
+        actionLogin,
+        (state)=>({
+            ...state,
+            user:[]
+        })
+    ),
+    on(
+        actionLoginSuccess,
+        (state, action)=>({
+            ...state,
+            user:action.answer
+        })
+    ),
+    on(
+        actionLoginFailure,
+        (state, action)=>({
+            ...state,
+            error:action.err
+        })
+    ),
     on(
         actionRegister,
         (state)=>({
@@ -25,7 +47,7 @@ const authReducer=createReducer(
         })
     ),
     on(
-        actionRegisterFailur,
+        actionRegisterFailure,
         (state, action)=>({
             ...state,
             error:action.err

@@ -15,8 +15,8 @@ const registerPost=(req,res)=>{
         })
         .catch((err)=> handlErrors(res,req))
 }
-const loginPost=async (req,res)=>{
-    await Auth
+const loginPost=(req,res)=>{
+    Auth
         .find({email:req.body.email})
         .then((user)=>{
             if(user.length==1){
