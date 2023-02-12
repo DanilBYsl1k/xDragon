@@ -1,0 +1,56 @@
+<div class="wrapper">
+	<div class="row m-0">
+		<div class="col-4 m-0 p-0">
+			<section class="auth">
+				<div class="auth__logo">xDragon</div>
+				<div class="auth__content">
+					<router-outlet></router-outlet>
+				</div>
+			</section>
+			<hr class="mt-8 text-white">
+		</div>
+		<div class="col-8 m-0 p-0">
+			<section class="cover">
+				<video 
+				class="cover__video"
+				[muted]="'muted'"
+				autoplay
+				playsinline
+				loop
+				#video
+				>
+				<source src="../../../../assets/How We Hire at Google.mp4" type="video/mp4">
+				</video>
+
+				<div class="cover__video-btns">
+
+					<ng-template [ngIf]="isMuted" [ngIfElse]="unMuted">
+						<div class="cover__video-btn" (click)="unMuteVideo(video)">
+							<mat-icon class="cover__video-icon">volume_up</mat-icon>
+						</div>
+					</ng-template>
+
+					<ng-template #unMuted>
+						<div class="cover__video-btn" (click)="muteVideo(video)">
+							<mat-icon class="cover__video-icon">volume_off</mat-icon>
+						</div>
+					</ng-template>
+
+					<ng-template [ngIf]="!isPause" [ngIfElse]="pause">
+						<div class="cover__video-btn" (click)="stopVideo(video)">
+							<mat-icon class="cover__video-icon">pause_circle_outline</mat-icon>
+						</div>
+					</ng-template>
+
+					<ng-template #pause>
+						<div class="cover__video-btn" (click)="playVideo(video)">
+							<mat-icon class="cover__video-icon">play_arrow</mat-icon>
+						</div>
+					</ng-template>
+
+				</div>
+
+			</section>
+		</div>
+	</div>
+</div>
