@@ -13,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
 //Material 
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { OffersModule } from './offers/offers.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AuthModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    OffersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
