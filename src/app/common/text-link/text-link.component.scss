@@ -1,0 +1,15 @@
+.text-link {
+	@apply text-yellow-300 ;
+	&:hover{
+		@apply cursor-pointer text-white delay-100
+	}
+}
+.text-link__button {
+	@apply relative
+}
+.text-link__text {
+	
+}
+.text-link__icon {
+	@apply absolute right-[-2rem] top-[1px]
+}
