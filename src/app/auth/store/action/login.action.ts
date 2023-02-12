@@ -3,14 +3,14 @@ import { Iauth } from "app/auth/types/auth.interface";
 import { ActionTypes } from "../actionTypes"
 
 export const actionLogin=createAction(
-    ActionTypes.Auth,
+    ActionTypes.Auth__Login,
     props<{pams:Iauth[]}>()
 )
 export const actionLoginSuccess=createAction(
-    ActionTypes.Auth_success,
+    ActionTypes.Auth_Login__success,
     props<{answer:Iauth[]}>()
 )
 export const actionLoginFailure=createAction(
-    ActionTypes.Auth_failure,
+    ActionTypes.Auth_Login__failure,
     props<{err:Error}>()
 )

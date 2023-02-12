@@ -2,24 +2,24 @@
 	@apply min-h-[100vh]
 }
 .auth {
-	@apply p-16  min-h-[100vh] bg-blue-600
+	@apply p-12 h-full bg-blue-600 xl:p-16
 }
 .auth__content {
-	@apply mt-28
+	@apply mt-20 lg:mt-28
 }
 .auth__logo {
 	@apply text-3xl
 }
 
 .cover {
-	@apply w-full min-h-[100vh] relative;
+	@apply w-full min-h-[100vh] relative  h-full;
 	&:hover .cover__video-btns{
 		@apply opacity-100 ease-in-out duration-500 rotate-0
 	}
 }
 
 .cover__video{
-	@apply object-cover min-h-[100vh] w-full;
+	@apply object-cover min-h-[100vh] w-full h-full;
 }
 .cover__video-btns {
 	@apply absolute z-[1] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex w-[250px] justify-between items-center h-[120px] opacity-0 ease-in-out duration-500 -rotate-12
