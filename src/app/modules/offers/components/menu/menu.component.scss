@@ -1,0 +1,17 @@
+.menu{
+	@apply bg-blue-900 z-10 h-full pt-[140px] px-12
+}
+.menu__content {
+}
+.menu__logo {
+}
+.menu__nav {
+}
+.menu__list {
+}
+.menu__link {
+	@apply mb-8 text-3xl  flex items-center border-b border-black pb-4 text-blue-200;
+	a{
+		@apply ml-3
+	}
+}

@@ -1,0 +1,9 @@
+.user-panel {
+	@apply flex  h-full justify-end
+}
+.user-panel__exit {
+	@apply flex 
+}
+.user-panel__icon{
+	@apply scale-[1.8] ml-8
+}

@@ -1,0 +1,9 @@
+.search {
+	@apply flex justify-center
+}
+.search__form {
+	@apply max-w-[400px] w-full
+}
+.search__input {
+	@apply w-full
+}
