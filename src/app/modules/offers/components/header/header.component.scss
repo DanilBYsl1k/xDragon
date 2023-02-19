@@ -1,5 +1,6 @@
 .header {
-	@apply  pt-5 bg-white border-b border-b-black fixed w-full
+	@apply  pt-5 bg-header fixed w-full left-[50%] translate-x-[-50%] text-white ;
+	background-color: #125da8;
 }
 .header__content {
 }
