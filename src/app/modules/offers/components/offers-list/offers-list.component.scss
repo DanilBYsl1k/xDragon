@@ -1,10 +1,37 @@
 .offers {
-	@apply pt-[140px]
 }
 .offers__content {
 }
 .offers__cards {
 }
 .offer__card {
-	@apply bg-primaryItem w-[90%] mb-12 h-[150px] rounded-xl mx-auto text-primaryOpacity
+	@apply bg-mainCard mb-12 min-h-[220px] rounded-xl mx-auto text-mainText px-8 py-6 flex;
+}
+.offer__card-text {
+	@apply pr-4;
+	flex: 0 1 85%;
+}
+.offer__title {
+	@apply text-2xl text-white;
+}
+.offer__description{
+	@apply mt-4;
+}
+.offer__benefits {
+	@apply flex mt-4 max-w-[600px] flex-wrap
+}
+.offer__benefit {
+	@apply w-[150px] bg-mainPurple mr-8 text-white text-sm flex justify-center items-center rounded-xl py-1 mb-4;
+}
+.offer__company {
+	flex: 0 1 15%;
+}
+.offer__company-logo {
+	@apply w-full h-[100px] object-contain;
+}
+.offer__company-title {
+	@apply text-white text-right mt-4 text-xl ease-in duration-300 cursor-pointer;
+	&:hover{
+		@apply text-lightBlue ease-in duration-200;
+	}
 }

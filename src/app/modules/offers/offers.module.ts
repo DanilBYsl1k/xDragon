@@ -9,7 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FilterComponent } from './components/filter/filter.component';
 import { HomeComponent } from './components/home/home.component';
 import { OffersListComponent } from './components/offers-list/offers-list.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 const baseUrl = "offers"
 const routes: Routes = [
   {
@@ -41,7 +42,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes),
     SharedModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    CdkAccordionModule
   ]
 })
 export class OffersModule { }

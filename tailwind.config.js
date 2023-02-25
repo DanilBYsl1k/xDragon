@@ -6,12 +6,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: '#0E1947',
-        primaryItem: '#353D62',
-        header: '#262D4F'
+        mainBlue: '#0f172a',
+        mainCard: '#1e293b',
+        header: '#262D4F',
+        mainPurple: "#4439c6",
+        darkBlue: "#1b2940"
       },
       colors: {
-        primaryOpacity: '#939AB0'
+        primaryOpacity: '#939AB0',
+        lightBlue: '#38bdf8',
+        mainText: "#9ca6b4"
+      },
+      borderColor: {
+        mainWhite: "#e5e7eb"
       }
     },
   },

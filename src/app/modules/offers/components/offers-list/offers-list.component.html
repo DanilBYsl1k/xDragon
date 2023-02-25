@@ -1,8 +1,24 @@
 <section class="offers">
 	<div class="offers__content">
 		<div class="offers__cards">
-			<div *ngFor="let item of offers" class="offer__card">
-				Лето и арбалеты
+			<div *ngFor="let offer of offers" class="offer__card">
+				<div class="offer__card-text">
+					<h2 class="offer__title">
+						{{offer.title}}
+					</h2>
+					<p class="offer__description">
+						{{formateDescription(offer.description)}}
+					</p>
+					<ul class="offer__benefits">
+						<li class="offer__benefit" *ngFor="let benefit of offer.benefits">
+							{{benefit}}
+						</li>
+					</ul>
+				</div>
+				<div class="offer__company">
+					<img [src]="offer.company.logo" alt="company logo" class="offer__company-logo">
+					<h4 class="offer__company-title">{{offer.company.name}}</h4>
+				</div>
 			</div>
 		</div>
 	</div>
