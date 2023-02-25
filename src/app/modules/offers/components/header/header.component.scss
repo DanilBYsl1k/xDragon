@@ -1,14 +1,33 @@
 .header {
-	@apply  pt-5 bg-header fixed w-full left-[50%] translate-x-[-50%] text-white ;
-	background-color: #125da8;
+	@apply  bg-mainBlue fixed w-full  border-b-[0.5px] border-b-mainWhite text-white z-50;
 }
 .header__content {
 }
-.row {
+.header__row{
+	@apply flex items-center justify-between h-[70px];
 }
-.col-3 {
+.header__logo{
+	@apply text-3xl;
 }
-.col-6 {
+.header__nav {
 }
-.header__search {
+.header__list {
+	@apply flex;
+}
+.header__link {
+	@apply ml-12 text-lg cursor-pointer ease-in duration-200;
+	&:first-child{
+		@apply ml-0
+	}
+	&:hover{
+		@apply text-lightBlue ease-in duration-300;
+	}
+}
+.header__icon {
+	i{
+		@apply ml-8 text-lg;
+		&:first-child{
+		@apply ml-0
+		}
+	}
 }
