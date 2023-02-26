@@ -2,13 +2,13 @@
 	@apply min-h-[100vh]
 }
 .auth {
-	@apply p-12 h-full bg-blue-600 xl:p-16
+	@apply p-12 h-full bg-mainBlue xl:p-16 text-mainText
 }
 .auth__content {
 	@apply mt-20 lg:mt-28
 }
 .auth__logo {
-	@apply text-3xl
+	@apply text-3xl text-white
 }
 
 .cover {
