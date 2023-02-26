@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { OffersListComponent } from './components/offers-list/offers-list.component';
 import {MatInputModule} from '@angular/material/input';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { OfferGuard } from './guard/offer.guard';
 const baseUrl = "offers"
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: `${baseUrl}/dashboard`,
     component: DashboardComponent,
+    canActivate:[OfferGuard],
     children: [
       {
         path: 'home',
