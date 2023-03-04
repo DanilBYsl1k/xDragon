@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IOffers } from '../../types/offer.interface';
 
 @Component({
   selector: 'app-offers-list',
@@ -13,7 +14,8 @@ export class OffersListComponent {
       benefits: ["Remote", "Medical insurance", "High salary", "Remote", "Medical insurance", "High salary"],
       company: {
         logo: "https://p.djinni.co/42/17074426e5f3bbad15ec7c6e08dbc4/Luxoft_Purple_RGB_400.png",
-        name: "Luxoft"
+        name: "Luxoft",
+        date: "05.20.2023"
       }
     },
     {
@@ -22,7 +24,8 @@ export class OffersListComponent {
       benefits: ["Remote", "Medical insurance", "High salary"],
       company: {
         logo: "https://p.djinni.co/42/17074426e5f3bbad15ec7c6e08dbc4/Luxoft_Purple_RGB_400.png",
-        name: "Luxoft"
+        name: "Luxoft",
+        date: "05.20.2023"
       }
     },
     {
@@ -31,7 +34,8 @@ export class OffersListComponent {
       benefits: ["Remote", "Medical insurance", "High salary"],
       company: {
         logo: "https://p.djinni.co/42/17074426e5f3bbad15ec7c6e08dbc4/Luxoft_Purple_RGB_400.png",
-        name: "Luxoft"
+        name: "Luxoft",
+        date: "05.20.2023"
       }
     },
     {
@@ -40,7 +44,8 @@ export class OffersListComponent {
       benefits: ["Remote", "Medical insurance", "High salary"],
       company: {
         logo: "https://p.djinni.co/42/17074426e5f3bbad15ec7c6e08dbc4/Luxoft_Purple_RGB_400.png",
-        name: "Luxoft"
+        name: "Luxoft",
+        date: "05.20.2023"
       }
     },
     {
@@ -49,14 +54,9 @@ export class OffersListComponent {
       benefits: ["Remote", "Medical insurance", "High salary"],
       company: {
         logo: "https://p.djinni.co/42/17074426e5f3bbad15ec7c6e08dbc4/Luxoft_Purple_RGB_400.png",
-        name: "Luxoft"
+        name: "Luxoft",
+        date: "05.20.2023"
       }
     }
   ]
-
-  formateDescription(desc: string){
-    if (desc.length > 250) return desc.substring(0,250) + `...`
-
-    return desc
-  }
 }

@@ -1,0 +1,9 @@
+.tag {
+	@apply bg-mainPurple w-auto  justify-center inline-block h-[35px] mr-4 mt-2 rounded-[4px] cursor-pointer duration-200;
+	&:hover{
+		@apply shadow-lg shadow-indigo-500/75 duration-200
+	}
+}
+.tag__title {
+	@apply text-white text-sm text-center leading-4 p-4 h-full flex items-center justify-center
+}

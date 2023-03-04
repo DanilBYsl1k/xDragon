@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { actionLogin } from '../../store/action/login.action';
 import { actionRegister } from '../../store/action/register.action';
 @Component({
   selector: 'app-register',
@@ -9,18 +9,26 @@ import { actionRegister } from '../../store/action/register.action';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  constructor(private store:Store){}
   registerForm: FormGroup
+
+  constructor(private store:Store, private router: Router){}
+
+  sendForm(){
+    let userFormData = this.registerForm.value;
+    this.store.dispatch(actionRegister({pams:userFormData}))
+    localStorage.setItem("user", JSON.stringify(userFormData))
+    this.router.navigate(["offers"])
+  }
+
   ngOnInit(): void {
     this.registerForm = new FormGroup(
       {
-      name: new FormControl("", Validators.required),
-      email: new FormControl("", [Validators.email, Validators.required]),
-      password: new FormControl("", [Validators.minLength(6), Validators.required])
+        name: new FormControl("", Validators.required),
+        email: new FormControl("", [Validators.email, Validators.required]),
+        password: new FormControl("", [Validators.minLength(6), Validators.required])
       }
     )
-  }
-  sendForm(){
-    this.store.dispatch(actionRegister({pams:this.registerForm.value}))
+
+    localStorage.removeItem("user")
   }
 }

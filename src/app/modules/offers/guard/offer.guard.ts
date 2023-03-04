@@ -9,7 +9,11 @@ export class OfferGuard implements CanActivate, CanDeactivate<unknown> {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return false;
+    if (localStorage.getItem("user")) {
+      return true
+    } else {
+      return false
+    }
   }
   canDeactivate(
     component: unknown,

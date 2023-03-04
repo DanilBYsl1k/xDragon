@@ -1,13 +1,21 @@
+//Core
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
+
+//Components
 import { SearchComponent } from './search/search.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
+
+//Material
+import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { TagComponent } from './tag/tag.component';
+
 @NgModule({
   declarations: [
     SearchComponent,
-    UserPanelComponent
+    UserPanelComponent,
+    TagComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   exports: [
     SearchComponent,
-    UserPanelComponent
+    UserPanelComponent,
+    TagComponent
   ]
 })
 export class SharedModule { }

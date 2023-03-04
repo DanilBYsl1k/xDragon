@@ -10,7 +10,8 @@ module.exports = {
         mainCard: '#1e293b',
         header: '#262D4F',
         mainPurple: "#4439c6",
-        darkBlue: "#1b2940"
+        darkBlue: "#1b2940",
+        lightBLue: "rgb(157, 201, 250)"
       },
       colors: {
         primaryOpacity: '#939AB0',
