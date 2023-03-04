@@ -32,6 +32,11 @@ const baseUrl = "auth"
 const routes: Routes = [
   {
     path: '',
+    redirectTo: baseUrl,
+    pathMatch: "full",
+  },
+  {
+    path: 'auth',
     redirectTo: `${baseUrl}/welcome`,
     pathMatch: "full",
   },
