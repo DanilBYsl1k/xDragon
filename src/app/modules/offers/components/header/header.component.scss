@@ -2,6 +2,7 @@
 	@apply  bg-mainBlue fixed w-full  border-b-[0.5px] border-b-mainWhite text-white z-50;
 }
 .header__content {
+	@apply px-12
 }
 .header__row{
 	@apply flex items-center justify-between h-[70px];

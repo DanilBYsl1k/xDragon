@@ -13,16 +13,12 @@ const registerPost=(req,res)=>{
                 .status(200)
                 .json(param)
         })
-        .catch((err)=> handlErrors(res,req))
+        .catch((err)=> handlErrors(err))
 }
 const loginPost=(req,res)=>{
-    console.log(req.body.email)
     Auth
         .find({email:req.body.email})
         .then((user)=>{
-            // console.log(user)
-            // console.log(user.length)
-            // console.log(user.length==1)
             if(user.length==1){
                 user.map(data=>{
                     if(data.password==req.body.password){

@@ -1,0 +1,21 @@
+.filter {
+	@apply h-full
+}
+.filter__content {
+}
+.filter__accordion {
+}
+.filter__accordion-item {
+}
+.filter__accordion-item-header {
+	@apply border-b border-black justify-between flex p-6 text-lg text-white bg-darkBlue;
+}
+.filter__accordion-item-body{
+	@apply px-2 pb-2 bg-lightBLue;
+}
+.filter__accordion-item-description {
+}
+.bi {
+}
+.bi-caret-down-square-fill {
+}

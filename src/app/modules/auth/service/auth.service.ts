@@ -6,11 +6,11 @@ import { IAuth } from '../types/auth.interface';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private htpp:HttpClient) { }
+  constructor(private http:HttpClient) { }
   login(dataForm:IAuth[]){
-    return this.htpp.post<IAuth[]>('http://localhost:1488/login', dataForm)
+    return this.http.post<IAuth[]>('http://localhost:1488/login', dataForm)
   }
   register(dataForm:IAuth[]){
-    return this.htpp.post<IAuth[]>('http://localhost:1488/register', dataForm)
+    return this.http.post<IAuth[]>('http://localhost:1488/register', dataForm)
   }
 }
