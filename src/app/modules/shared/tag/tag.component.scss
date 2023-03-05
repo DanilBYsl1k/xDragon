@@ -1,7 +1,7 @@
 .tag {
 	@apply bg-mainPurple w-auto  justify-center inline-block h-[35px] mr-4 mt-2 rounded-[4px] cursor-pointer duration-200;
 	&:hover{
-		@apply shadow-lg shadow-indigo-500/75 duration-200
+		@apply shadow-lg shadow-indigo-500/25 duration-200
 	}
 }
 .tag__title {
