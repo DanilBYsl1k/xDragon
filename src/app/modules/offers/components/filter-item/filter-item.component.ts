@@ -9,6 +9,6 @@ import { IFilter } from '../../types/filter.interface';
 export class FilterItemComponent {
     items = ['Sort by language', 'Sory by experiance', 'Sort by location', 'Sort by company'];
 
-    @Input () data: IFilter
+    @Input () data: any
     @Input () id: number
 }

@@ -20,7 +20,7 @@ const offersReducer = createReducer(
 		actionRemoveFilter,
 		(state, action) => ({
 			...state,
-			filters: state.filters.splice(action.id, 1)
+			filters: state.filters.filter(item => item.id !== action.id)
 		})
 	),
 	on(

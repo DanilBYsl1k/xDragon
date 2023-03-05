@@ -11,17 +11,19 @@ export class TagComponent {
   @Input () title: string
   @Input () id: number
   @Input () action: string
+  @Input () isClose: boolean
   constructor(private store: Store){
 
   }
   addTag(){
     this.store.dispatch(actionAddFilter({tag: {
       title: this.title,
-      id: Math.random() * 100
+      id: this.id
     }}))
     console.log(this.id)
   }
   removeTag(){
+    console.log(this.id)
     this.store.dispatch(actionRemoveFilter({id: this.id}))
   }
 }
