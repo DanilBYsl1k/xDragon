@@ -1,4 +1,4 @@
-import { createReducer, on } from "@ngrx/store";
+import { Action, createReducer, on } from "@ngrx/store";
 import { actionAddFilter, actionGetFilterList, actionRemoveFilter } from "./action/filter.action";
 import { IofferInitialState } from "./types/action.types";
 
@@ -11,16 +11,16 @@ const offersReducer = createReducer(
 	initialState,
 	on(
 		actionAddFilter,
-		(state, payload) => ({
+		(state, action) => ({
 			...state,
-			////
+			filters: [...state.filters, action.tag]
 		})
 	),
 	on(
 		actionRemoveFilter,
-		(state, payload) => ({
+		(state, action) => ({
 			...state,
-			///
+			filters: state.filters.splice(action.id, 1)
 		})
 	),
 	on(
@@ -31,3 +31,7 @@ const offersReducer = createReducer(
 		})
 	)
 )
+
+export function reducersOffers(state: IofferInitialState, action: Action){
+	return offersReducer(state, action)
+}

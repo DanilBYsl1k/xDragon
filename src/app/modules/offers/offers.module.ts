@@ -23,6 +23,8 @@ import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FilterItemComponent } from './components/filter-item/filter-item.component';
 import { OfferItemComponent } from './components/offer-item/offer-item.component';
+import { StoreModule } from '@ngrx/store';
+import { reducersOffers } from './store/reducer';
 
 const baseUrl = "offers"
 const routes: Routes = [
@@ -60,7 +62,8 @@ const routes: Routes = [
     SharedModule,
     MatIconModule,
     MatInputModule,
-    CdkAccordionModule
+    CdkAccordionModule,
+    StoreModule.forFeature("offers", reducersOffers)
   ]
 })
 export class OffersModule { }

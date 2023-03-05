@@ -4,6 +4,17 @@
 		@apply shadow-lg shadow-indigo-500/25 duration-200
 	}
 }
+.tag__content{
+	@apply h-full flex items-center;
+}
 .tag__title {
 	@apply text-white text-sm text-center leading-4 p-4 h-full flex items-center justify-center
+}
+.tag__close{
+	i{
+		@apply text-white duration-100;
+		&:hover{
+			@apply text-primaryOpacity duration-100;
+		}
+	}
 }

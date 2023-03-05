@@ -1,9 +1,12 @@
 import { createAction, props } from "@ngrx/store";
-import { FilterTypes } from "../types/filter.types";
+import { FilterTypes } from "../types/action.types";
 
 export const actionAddFilter = createAction(
 	FilterTypes.Add_Filter,
-	props<{tag: string}>()
+	props<{tag: {
+		title: string,
+		id: number
+	}}>()
 )
 
 export const actionRemoveFilter = createAction(
