@@ -6,7 +6,7 @@
 		  </mat-form-field>
 
 		  <cdk-accordion class="filter__accordion">
-				<app-filter-item *ngFor="let filter of filterList; let index = index" [data]="filter" [id]="index"></app-filter-item>
+				<app-filter-item *ngFor="let filter of filterList.list; index as i" [data]="filter"></app-filter-item>
 		  </cdk-accordion>
 	</div>
 </aside>

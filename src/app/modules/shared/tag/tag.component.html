@@ -1,5 +1,10 @@
-<div class="tag">
-	<div class="tag__title">
-		{{title}}
+<div class="tag" [ngClass]="isClose ? 'pl-3 pr-5' : 'px-4'">
+	<div class="tag__content">
+		<div class="tag__title" (click)="addTag()">
+			{{title}}
+		</div>
+		<div class="tag__close" (click)="removeTag()" *ngIf="isClose">
+			<i class="bi bi-x"></i>
+		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
 			{{formateDescription(offer.description)}}
 		</p>
 		<ul class="offer__benefits">
-			<app-tag *ngFor="let benefit of offer.benefits" [title]="benefit"></app-tag>
+			<app-tag *ngFor="let benefit of offer.benefits" [title]="benefit" [isClose]="false"></app-tag>
 		</ul>
 		<p class="offer__company-date">{{offer.company.date}}</p>
 	</div>
